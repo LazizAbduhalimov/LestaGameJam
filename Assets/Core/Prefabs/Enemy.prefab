@@ -9,8 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2113701585224269358}
-  - component: {fileID: 4869225150252108004}
   - component: {fileID: 4045775181493951604}
+  - component: {fileID: 4664607439707331964}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -35,22 +35,6 @@ Transform:
   - {fileID: 870058918830724169}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4869225150252108004
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2934878335910000674}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b38efb179cb962b4c99bab5c4d21f6ac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::EnemyScript
-  _shootPoint: {fileID: 220112022069639722}
-  _shootDelay: 2
-  _target: {fileID: 0}
-  _poolManager: {fileID: 0}
 --- !u!114 &4045775181493951604
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -65,6 +49,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::RotateToTarget
   _target: {fileID: 0}
   _rotationSpeed: 15
+--- !u!114 &4664607439707331964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2934878335910000674}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dafb2d3d26d324842b0ebe566c3a9016, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TurretAttack
+  AttackRate: 2
+  _bulletNumber: 1
+  _timeBtwAttack: 0.2
+  _bulletSpeed: 8
+  _bulletCreateTransform: {fileID: 220112022069639722}
+  _bulletsPoolData: {fileID: 0}
 --- !u!1 &7673716477452289983
 GameObject:
   m_ObjectHideFlags: 0

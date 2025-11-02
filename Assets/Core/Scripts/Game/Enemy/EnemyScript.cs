@@ -29,7 +29,7 @@ public class EnemyScript : MonoBehaviour
     {
         if (_timer < _shootDelay)
         {
-            _timer += Time.fixedDeltaTime;
+            _timer += Time.deltaTime;
             return;
         }
 

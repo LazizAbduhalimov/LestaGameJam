@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3974574588148232603}
-  - component: {fileID: 2213821055752705729}
+  - component: {fileID: 4828544047734003975}
   m_Layer: 0
   m_Name: EnemyManager
   m_TagString: Untagged
@@ -32,7 +32,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2213821055752705729
+--- !u!114 &4828544047734003975
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -41,9 +41,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1924138987862627200}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 93a1751a8fd92c249b7d6158788c4680, type: 3}
+  m_Script: {fileID: 11500000, guid: 52efd0ce8e294a188e976552e8dd996d, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PoolManager
-  _objToPool: {fileID: 4810250749628589664, guid: 1ef965f31bde6b64d934753364f6d6ab, type: 3}
-  _poolCount: 10
-  _container: {fileID: 0}
+  m_EditorClassIdentifier: Pools::PoolSystem.Alternative.PoolContainer
+  _poolCount: 5
+  _autoExpand: 1
+  _poolObject: {fileID: 4302050426124106007, guid: 1ef965f31bde6b64d934753364f6d6ab, type: 3}
+  _container: {fileID: 3974574588148232603}
