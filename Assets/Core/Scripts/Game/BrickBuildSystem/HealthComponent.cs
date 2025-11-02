@@ -4,14 +4,15 @@ using UnityEngine;
 
 public class HealthCompponent : MonoBehaviour
 {
-    public Action OnDeath; 
+    public Action OnDeath;
+    public Action OnTakeDamage;
     public int MaxHealth;
     [ReadOnly] private int _currentHealth;
 
     public void TakeOneDamage()
     {
         _currentHealth--;
-
+        OnTakeDamage?.Invoke();
         if (_currentHealth < 1)
         {
             Die();
