@@ -13,6 +13,7 @@ public class RotateToTarget : MonoBehaviour
 
     public void Update()
     {
+        if (_target == null) return;
         LookAtTarget(_target);
     }
 
