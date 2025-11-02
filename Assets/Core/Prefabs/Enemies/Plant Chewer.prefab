@@ -136,6 +136,7 @@ GameObject:
   - component: {fileID: 2408408881075226810}
   - component: {fileID: 1134344488702249343}
   - component: {fileID: 3221194313328660829}
+  - component: {fileID: 1264921068139448512}
   m_Layer: 0
   m_Name: Plant Chewer
   m_TagString: Untagged
@@ -162,6 +163,7 @@ Transform:
   - {fileID: 6581661093758367784}
   - {fileID: 2975278955527545213}
   - {fileID: 1041646677630549280}
+  - {fileID: 2856428693195658495}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &1134344488702249343
@@ -199,7 +201,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RotateToTarget
   _target: {fileID: 0}
-  _rotationSpeed: 0
+  _rotationSpeed: 15
+--- !u!114 &1264921068139448512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1314333146917796487}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c82f046af63647f3b1b1b8c92b0bf14c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MultipleLineAttack
+  AttackRate: 2
+  _spreadAngle: 45
+  _lines: 1
+  _queues: 1
+  _timeBetweenQueues: 0.2
+  _bulletCreateTransform: {fileID: 2856428693195658495}
+  _bulletsPoolData: {fileID: 0}
 --- !u!1 &2234170117190238639
 GameObject:
   m_ObjectHideFlags: 0
@@ -405,6 +426,37 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 634089853349353773}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4034620778894805787
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2856428693195658495}
+  m_Layer: 0
+  m_Name: BulletPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2856428693195658495
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4034620778894805787}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.000000059604645, y: 1.0000024, z: 0.50000006}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2408408881075226810}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4432822009132392026
 GameObject:
