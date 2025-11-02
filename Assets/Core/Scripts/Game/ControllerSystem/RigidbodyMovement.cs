@@ -3,7 +3,8 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody))]
 public class RigidbodyMovement : MonoBehaviour, IControllable
 {
-    [SerializeField] private float _speed;
+    [SerializeField] private float _speed = 5f;
+    [SerializeField] private float _rotationSpeed = 360f; // градусов в секунду
     private Rigidbody _rb;
     private Vector3 _direction;
     
@@ -39,6 +40,17 @@ public class RigidbodyMovement : MonoBehaviour, IControllable
     private void RotateAlongMoveDirection()
     {
         if (_direction.sqrMagnitude != 0f)
-            transform.LookAt(transform.position + _direction);
+        {
+            // Вычисляем целевой поворот (куда хотим смотреть)
+            Quaternion targetRotation = Quaternion.LookRotation(_direction);
+            
+            // Плавно поворачиваемся к цели
+            // maxDegreesDelta = скорость * время
+            transform.rotation = Quaternion.RotateTowards(
+                transform.rotation,
+                targetRotation,
+                _rotationSpeed * Time.deltaTime
+            );
+        }
     }
 }

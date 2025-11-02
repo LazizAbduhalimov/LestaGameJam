@@ -1,5 +1,4 @@
 using System;
-using Unity.Collections;
 using UnityEngine;
 
 public class HealthCompponent : MonoBehaviour
@@ -7,13 +6,18 @@ public class HealthCompponent : MonoBehaviour
     public Action OnDeath;
     public Action OnTakeDamage;
     public int MaxHealth;
-    [ReadOnly] private int _currentHealth;
+    public int CurrentHealth;
+
+    public void OnEnable()
+    {
+        CurrentHealth = MaxHealth;        
+    }
 
     public void TakeOneDamage()
     {
-        _currentHealth--;
+        CurrentHealth--;
         OnTakeDamage?.Invoke();
-        if (_currentHealth < 1)
+        if (CurrentHealth < 1)
         {
             Die();
         }
