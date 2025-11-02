@@ -3,6 +3,7 @@
 [RequireComponent(typeof(IControllable))]
 public class InputController: MonoBehaviour
 {
+    public bool IsStunned;
     private IControllable _controllable;
     private Camera _mainCamera;
 
@@ -16,6 +17,11 @@ public class InputController: MonoBehaviour
     {
         var horizontal = Input.GetAxisRaw("Horizontal");
         var vertical = Input.GetAxisRaw("Vertical");
+        if (IsStunned)
+        {
+            horizontal = 0;
+            vertical = 0;   
+        }
         var cameraForward = _mainCamera.transform.forward.normalized;
         var cameraRight = _mainCamera.transform.right.normalized;
         cameraForward.y = 0f;

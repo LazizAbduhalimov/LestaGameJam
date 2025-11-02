@@ -22,7 +22,7 @@ public class EnemyBullet : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (gameObject.activeInHierarchy == true)
+        if (gameObject.activeInHierarchy)
         {
             _rb.linearVelocity = transform.forward * _speed;
         }
@@ -31,32 +31,34 @@ public class EnemyBullet : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         Debug.Log($"{collision.gameObject.tag}, {collision.gameObject.name}");
-        // if (collision.gameObject.)
-
-        if (collision.gameObject.tag == "Player")
+        var go = collision.gameObject;
+        if (go.TryGetComponent<PlayerMb>(out var player))
         {
-            Debug.Log("Player");
-            //ЛОГИКА СТОЛКНОВЕНИЕ С ИГРОКОМ
+            player.Stun();
         }
 
-        if (collision.gameObject.TryGetComponent<HealthCompponent>(out var health))
+        if (go.TryGetComponent<HealthCompponent>(out var health))
         {
             health.TakeOneDamage();
+        }
+        else if (go.transform.parent.TryGetComponent<HealthCompponent>(out var healthComp))
+        {
+            healthComp.TakeOneDamage();
         }
         
         _bounces++;
         if (_bounces >= _bouncesBeforeDie) RefreshBullet();
 
-        Vector3 normal = collision.contacts[0].normal;
+        var normal = collision.contacts[0].normal;
         normal.y = 0;
         normal.Normalize();
 
-        Vector3 reflectDir = Vector3.Reflect(transform.forward, normal);
+        var reflectDir = Vector3.Reflect(transform.forward, normal);
         reflectDir = Quaternion.Euler(0f, Random.Range(-_angleError, _angleError), 0f) * reflectDir;
         transform.forward = reflectDir;
-
         _rb.linearVelocity = new Vector3(reflectDir.x, 0f, reflectDir.z) * _speed;
     }
+    
     private void RefreshBullet()
     {
         _bounces = 0;

@@ -1,8 +1,4 @@
-using System.Collections;
-using System.Threading;
-using Unity.VisualScripting;
 using UnityEngine;
-using static UnityEngine.GraphicsBuffer;
 
 public class EnemyScript : MonoBehaviour
 {
@@ -33,10 +29,10 @@ public class EnemyScript : MonoBehaviour
             }
 
             _timer = 0;
-            Vector3 direction = _target.transform.position - transform.position;
+            var direction = _target.transform.position - transform.position;
             direction.y = transform.position.y;
 
-            Quaternion lookRotation = Quaternion.LookRotation(direction);
+            var lookRotation = Quaternion.LookRotation(direction);
 
             _bullet = _poolManager.GetObject(_shootPoint.position, lookRotation);
         }
@@ -44,13 +40,12 @@ public class EnemyScript : MonoBehaviour
 
     private bool ShootCondition()
     {
-        if (_target != null)
+        if (_target)
         {
-            if (_bullet == null || _bullet.activeInHierarchy == false) return true;
-            
-            else return false;
+            return !_bullet || _bullet.activeInHierarchy == false;
         }
-        else return false;
+
+        return false;
 
         //“€ ÃŒ∆≈ÿ‹ »«Ã≈Õ»“‹ »À» ∆≈ –¿—ÿ»–»“‹ ÀŒ√» ” ”—ÀŒ¬»ﬂ ¬€—“–≈À¿
     }

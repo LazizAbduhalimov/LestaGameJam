@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 1052922445374760859}
   - component: {fileID: 2412242736512269324}
   - component: {fileID: 6405671473756576369}
-  m_Layer: 0
+  - component: {fileID: 6526364780024516382}
+  m_Layer: 3
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -44,7 +45,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2643691500699523329}
   serializedVersion: 5
-  m_Mass: 1
+  m_Mass: 1000
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -102,6 +103,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BrickBuilder
   BrickPrefab: {fileID: 5770480167734321192, guid: e435bf0b185f2c6439f1632baeb22806, type: 3}
   PreviewBrick: {fileID: 0}
+  _spawnDistance: 1
+--- !u!114 &6526364780024516382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2643691500699523329}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7410e462b29585444926ae6edd12475a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerMb
+  _stunDuration: 1
 --- !u!1 &7536471356843224205
 GameObject:
   m_ObjectHideFlags: 0
@@ -113,8 +128,7 @@ GameObject:
   - component: {fileID: 1204875614047948040}
   - component: {fileID: 7130577804518785516}
   - component: {fileID: 960338020471665016}
-  - component: {fileID: 3136479159291041872}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -192,27 +206,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &3136479159291041872
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7536471356843224205}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &8980208104375858997
 GameObject:
   m_ObjectHideFlags: 0
@@ -225,7 +218,7 @@ GameObject:
   - component: {fileID: 8427170454656324309}
   - component: {fileID: 8103771431532738088}
   - component: {fileID: 287532448405113901}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -242,7 +235,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: -0, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalScale: {x: 0.65, y: 0.65, z: 0.65}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1204875614047948040}
