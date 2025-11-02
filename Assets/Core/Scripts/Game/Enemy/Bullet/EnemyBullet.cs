@@ -41,7 +41,8 @@ public class EnemyBullet : MonoBehaviour
         {
             health.TakeOneDamage();
         }
-        else if (go.transform.parent.TryGetComponent<HealthCompponent>(out var healthComp))
+        else if (go.transform.parent &&
+                 go.transform.parent.TryGetComponent<HealthCompponent>(out var healthComp))
         {
             healthComp.TakeOneDamage();
         }

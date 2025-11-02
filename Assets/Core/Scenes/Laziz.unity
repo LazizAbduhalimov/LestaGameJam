@@ -671,6 +671,51 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3974574588148232603, guid: d8b7e9b36eb44f64d98a2e0a40d52617, type: 3}
   m_PrefabInstance: {fileID: 831470964}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &191390906
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 191390908}
+  - component: {fileID: 191390907}
+  m_Layer: 0
+  m_Name: Game Conditions
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &191390907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 191390906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a628f8f9d1fc4028bc547b4c7117e27e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Game.LoseCondition
+  Bricks: []
+--- !u!4 &191390908
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 191390906}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 10.565, y: 1.25446, z: -2.45265}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &216947255 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7883199631806708165, guid: b49586ddfec65d64d91eec750143a446, type: 3}
@@ -4406,3 +4451,4 @@ SceneRoots:
   - {fileID: 6194800314437043038}
   - {fileID: 831470964}
   - {fileID: 855608602}
+  - {fileID: 191390908}

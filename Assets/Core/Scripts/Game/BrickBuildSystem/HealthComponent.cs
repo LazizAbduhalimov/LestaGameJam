@@ -1,8 +1,10 @@
+using System;
 using Unity.Collections;
 using UnityEngine;
 
 public class HealthCompponent : MonoBehaviour
 {
+    public Action OnDeath; 
     public int MaxHealth;
     [ReadOnly] private int _currentHealth;
 
@@ -19,5 +21,6 @@ public class HealthCompponent : MonoBehaviour
     public void Die()
     {
         gameObject.SetActive(false);
+        OnDeath?.Invoke();
     }
 }

@@ -2,21 +2,21 @@ using System;
 
 public static class Bank
 {
-    public static int Coins { get; private set; }
+    public static int Score { get; private set; }
 
-    public static Action<object, int, int> OnCoinsValueChangedEvent;
+    public static Action<object, int, int> OnValueChangedEvent;
 
-    public static void AddCoins(object sender, int coins)
+    public static void AddScore(object sender, int coins)
     {
         if (coins < 1)
             throw new ArgumentException("Number of coins should be positive");
         
-        var oldValue = Coins;
-        Coins += coins;
-        OnCoinsValueChangedEvent?.Invoke(sender, oldValue, Coins);
+        var oldValue = Score;
+        Score += coins;
+        OnValueChangedEvent?.Invoke(sender, oldValue, Score);
     }
 
-    public static void SpendCoins(object sender, int coins)
+    public static void SpendScore(object sender, int coins)
     {
         if (coins < 1)
             throw new ArgumentException("Number of coins should be positive");
@@ -24,13 +24,13 @@ public static class Bank
         if (IsEnoughCoins(coins))
             return;
 
-        var oldValue = Coins;
-        Coins -= coins;
-        OnCoinsValueChangedEvent?.Invoke(sender, oldValue, Coins);
+        var oldValue = Score;
+        Score -= coins;
+        OnValueChangedEvent?.Invoke(sender, oldValue, Score);
     }
 
     public static bool IsEnoughCoins(int number)
     {
-        return Coins >= number;
+        return Score >= number;
     }
 }
