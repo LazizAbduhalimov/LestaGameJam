@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using NUnit.Framework;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -30,6 +31,7 @@ public class EnemyBullet : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         var go = collision.gameObject;
+        var hasScore = true;
         if (go.TryGetComponent<PlayerMb>(out var player))
         {
             player.Stun();
@@ -37,6 +39,7 @@ public class EnemyBullet : MonoBehaviour
 
         if (go.TryGetComponent<HealthCompponent>(out var health))
         {
+            hasScore = false;
             health.TakeOneDamage();
             var text = health.CurrentHealth == 0 ? "Broken" : $"hp left: {health.CurrentHealth}";
             Damages.Instance.SpawnNumber(text, go.transform.position);
@@ -44,12 +47,19 @@ public class EnemyBullet : MonoBehaviour
         else if (go.transform.parent &&
                  go.transform.parent.TryGetComponent<HealthCompponent>(out var healthComp))
         {
+            hasScore = false;
             var text = healthComp.CurrentHealth == 0 ? "Broken" : $"hp left: {healthComp.CurrentHealth}";
             Damages.Instance.SpawnNumber(text, go.transform.position);
             healthComp.TakeOneDamage();
         }
-        
-        SoundManager.Instance.PlayFX($"hit{Random.Range(1, 4)}");
+
+        if (hasScore)
+        {
+            SoundManager.Instance.PlayFX($"hit{Random.Range(1, 4)}");
+            var score = 5;
+            Bank.AddScore(this, score);
+            Damages.Instance.SpawnScore($"+{score}", collision.transform.position);
+        }
         _bounces++;
         if (_bounces >= _bouncesBeforeDie) RefreshBullet();
 

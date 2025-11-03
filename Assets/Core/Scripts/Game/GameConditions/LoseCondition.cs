@@ -4,10 +4,17 @@ namespace Game
 {
     public class LoseCondition : MonoBehaviour
     {
+        public static LoseCondition Instance => _instance;
+        public static LoseCondition _instance;
         public GameObject UI;
         public BrickMb[] Bricks;
         private int _bricksLeft;
-        
+
+        public void Awake()
+        {
+            _instance = this;
+        }
+
         public void Start()
         {
             Bricks = FindObjectsByType<BrickMb>(FindObjectsSortMode.None);
