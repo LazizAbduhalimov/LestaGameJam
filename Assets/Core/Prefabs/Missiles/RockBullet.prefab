@@ -109,9 +109,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbf31b0a207fed94dbb46103bb276911, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyBullet
-  _speed: 10
-  _bouncesBeforeDie: 5
+  _speed: 9
   _angleError: 15
+  _bouncesBeforeDie: 3
 --- !u!114 &4698295674066681265
 MonoBehaviour:
   m_ObjectHideFlags: 0

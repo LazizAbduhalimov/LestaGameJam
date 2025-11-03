@@ -172,6 +172,7 @@ GameObject:
   - component: {fileID: 7055835090664281946}
   - component: {fileID: 2835347502174542997}
   - component: {fileID: 4666596577977008353}
+  - component: {fileID: 516222652568279376}
   m_Layer: 0
   m_Name: Golem Fire
   m_TagString: Untagged
@@ -252,17 +253,35 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1755231138798925360}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c82f046af63647f3b1b1b8c92b0bf14c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MultipleLineAttack
-  AttackRate: 2
-  _spreadAngle: 45
-  _lines: 1
-  _queues: 1
-  _timeBetweenQueues: 0.2
+  AttackRate: 6
+  _spreadAngle: 90
+  _lines: 4
+  _queues: 2
+  _timeBetweenQueues: 1
   _bulletCreateTransform: {fileID: 4371843743165394756}
+  _bulletsPoolData: {fileID: 0}
+--- !u!114 &516222652568279376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1755231138798925360}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dafb2d3d26d324842b0ebe566c3a9016, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TurretAttack
+  AttackRate: 2
+  _bulletNumber: 1
+  _timeBtwAttack: 0.2
+  _bulletSpeed: 8
+  _bulletCreateTransform: {fileID: 0}
   _bulletsPoolData: {fileID: 0}
 --- !u!1 &1787323742149389304
 GameObject:
@@ -25415,6 +25434,10 @@ PrefabInstance:
     - target: {fileID: 6332599858459971400, guid: e0c6def6068aff54bbdb780a968d4bd4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6332599858459971401, guid: e0c6def6068aff54bbdb780a968d4bd4, type: 3}
+      propertyPath: m_AdditionalShaderChannelsFlag
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 6332599858459971402, guid: e0c6def6068aff54bbdb780a968d4bd4, type: 3}
       propertyPath: m_PresetInfoIsWorld

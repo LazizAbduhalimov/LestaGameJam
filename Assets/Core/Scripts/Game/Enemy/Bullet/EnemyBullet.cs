@@ -29,7 +29,6 @@ public class EnemyBullet : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log($"{collision.gameObject.tag}, {collision.gameObject.name}");
         var go = collision.gameObject;
         if (go.TryGetComponent<PlayerMb>(out var player))
         {
@@ -45,7 +44,8 @@ public class EnemyBullet : MonoBehaviour
         {
             healthComp.TakeOneDamage();
         }
-        
+
+        SoundManager.Instance.PlayFX($"hit{Random.Range(1, 4)}");
         _bounces++;
         if (_bounces >= _bouncesBeforeDie) RefreshBullet();
 

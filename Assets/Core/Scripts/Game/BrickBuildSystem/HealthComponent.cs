@@ -21,11 +21,17 @@ public class HealthCompponent : MonoBehaviour
         {
             Die();
         }
-    } 
-    
+    }
+
     public void Die()
     {
         gameObject.SetActive(false);
         OnDeath?.Invoke();
     }
+
+    // public void OnDisable()
+    // {
+    //     OnTakeDamage = null;
+    //     OnDeath = null;
+    // }
 }

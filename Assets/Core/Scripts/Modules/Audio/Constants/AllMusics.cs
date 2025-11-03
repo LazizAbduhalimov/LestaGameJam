@@ -1,4 +1,4 @@
 public static class AllMusics
 {
-	public static readonly string MainTheme = "MainTheme";
+	public static readonly string Theme = "Theme";
 }

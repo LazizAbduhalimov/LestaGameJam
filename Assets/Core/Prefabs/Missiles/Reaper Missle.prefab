@@ -77,8 +77,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyBullet
   _speed: 6
-  _bouncesBeforeDie: 4
   _angleError: 30
+  _bouncesBeforeDie: 3
 --- !u!114 &6207514542881511927
 MonoBehaviour:
   m_ObjectHideFlags: 0
