@@ -38,13 +38,17 @@ public class EnemyBullet : MonoBehaviour
         if (go.TryGetComponent<HealthCompponent>(out var health))
         {
             health.TakeOneDamage();
+            var text = health.CurrentHealth == 0 ? "Broken" : $"hp left: {health.CurrentHealth}";
+            Damages.Instance.SpawnNumber(text, go.transform.position);
         }
         else if (go.transform.parent &&
                  go.transform.parent.TryGetComponent<HealthCompponent>(out var healthComp))
         {
+            var text = healthComp.CurrentHealth == 0 ? "Broken" : $"hp left: {healthComp.CurrentHealth}";
+            Damages.Instance.SpawnNumber(text, go.transform.position);
             healthComp.TakeOneDamage();
         }
-
+        
         SoundManager.Instance.PlayFX($"hit{Random.Range(1, 4)}");
         _bounces++;
         if (_bounces >= _bouncesBeforeDie) RefreshBullet();
