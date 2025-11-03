@@ -4,6 +4,7 @@ namespace Game
 {
     public class LoseCondition : MonoBehaviour
     {
+        public GameObject UI;
         public BrickMb[] Bricks;
         private int _bricksLeft;
         
@@ -26,8 +27,8 @@ namespace Game
             _bricksLeft--;
             if (_bricksLeft < 1)
             {
-                Debug.Log("Game Over");
-                Debug.Log(Bank.Score);
+                UI.SetActive(true);
+                Time.timeScale = 0f;
             }
         }
     }

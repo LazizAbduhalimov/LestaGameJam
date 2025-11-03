@@ -63,6 +63,8 @@ public class TurretAttack : AttackBase
     private void CreateBullet(Vector3 position, Quaternion rotation)
     {
         var bullet = _bulletsPoolData.Pool.GetFreeElement(false);
+        var bulletComp = bullet.GetComponent<EnemyBullet>();
+        bulletComp.Initialize(_bulletSpeed, 15, 3);
         bullet.transform.SetPositionAndRotation(position, rotation);
         bullet.gameObject.SetActive(true);
     }
