@@ -8,7 +8,7 @@ public class Score : MonoBehaviour
     public void Start()
     {
         Bank.OnValueChangedEvent += UpdateText;
-        Bank.SpendScore(this, Bank.Score);
+        Bank.SetScore(this, 0);
     }
 
     public void OnDestroy()

@@ -1,4 +1,5 @@
 using System;
+using UnityEngine.Animations;
 
 public static class Bank
 {
@@ -10,10 +11,16 @@ public static class Bank
     {
         if (coins < 1)
             throw new ArgumentException("Number of coins should be positive");
-        
+
         var oldValue = Score;
         Score += coins;
         OnValueChangedEvent?.Invoke(sender, oldValue, Score);
+    }
+
+    public static void SetScore(object sender, int value)
+    {
+        Score = value;
+        OnValueChangedEvent?.Invoke(sender, value, value); // fix
     }
 
     public static void SpendScore(object sender, int coins)

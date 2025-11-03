@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 2408408881075226810}
   - component: {fileID: 1134344488702249343}
   - component: {fileID: 3221194313328660829}
-  - component: {fileID: 1264921068139448512}
+  - component: {fileID: 707317219832346823}
   m_Layer: 0
   m_Name: Plant Chewer
   m_TagString: Untagged
@@ -202,23 +202,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::RotateToTarget
   _target: {fileID: 0}
   _rotationSpeed: 15
---- !u!114 &1264921068139448512
+--- !u!114 &707317219832346823
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1314333146917796487}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c82f046af63647f3b1b1b8c92b0bf14c, type: 3}
+  m_Script: {fileID: 11500000, guid: dafb2d3d26d324842b0ebe566c3a9016, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MultipleLineAttack
-  AttackRate: 2
-  _spreadAngle: 45
-  _lines: 1
-  _queues: 1
-  _timeBetweenQueues: 0.2
+  m_EditorClassIdentifier: Assembly-CSharp::TurretAttack
+  AttackRate: 4
+  _bulletNumber: 3
+  _timeBtwAttack: 0.4
+  _bulletSpeed: 11
   _bulletCreateTransform: {fileID: 2856428693195658495}
   _bulletsPoolData: {fileID: 0}
 --- !u!1 &2234170117190238639
