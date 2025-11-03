@@ -33,6 +33,7 @@ Transform:
   - {fileID: 177593067068420151}
   - {fileID: 8546412016632879630}
   - {fileID: 3255055764626481173}
+  - {fileID: 2455039552680446711}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4415600275833933938
@@ -83,6 +84,54 @@ MonoBehaviour:
   _autoExpand: 1
   _poolObject: {fileID: 7809542201046776649, guid: c1e2b87ef11cfe34897a3b9fc9103d45, type: 3}
   _container: {fileID: 177593067068420151}
+--- !u!1 &6477110506914591842
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2455039552680446711}
+  - component: {fileID: 8944415456808002229}
+  m_Layer: 0
+  m_Name: Cactus
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2455039552680446711
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6477110506914591842}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3974574588148232603}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8944415456808002229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6477110506914591842}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52efd0ce8e294a188e976552e8dd996d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Pools::PoolSystem.Alternative.PoolContainer
+  _poolCount: 15
+  _autoExpand: 1
+  _poolObject: {fileID: 7809542201046776649, guid: c105486175207be4e9912db3f64b27f0, type: 3}
+  _container: {fileID: 3974574588148232603}
 --- !u!1 &7494200370706123922
 GameObject:
   m_ObjectHideFlags: 0

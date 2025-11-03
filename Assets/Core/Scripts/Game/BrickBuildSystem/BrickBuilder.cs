@@ -109,6 +109,5 @@ public class BrickBuilder : MonoBehaviour {
         _maxCharges++;
         _currentCharges = Mathf.Min(_currentCharges + 1, _maxCharges);
         UpdateSkullsText();
-        Debug.Log($"Map brick destroyed: increased max charges to {_maxCharges}");
     }
 }

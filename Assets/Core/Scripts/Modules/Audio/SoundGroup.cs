@@ -15,7 +15,6 @@ public class SoundGroup : MonoBehaviour
         {
             free = DuplicateFirstElement();
         }
-        Debug.Log($"Taken element: {free.name}");
         return free;
     }
 

@@ -52,7 +52,7 @@ public class EnemyBullet : MonoBehaviour
             Damages.Instance.SpawnNumber(text, go.transform.position);
             healthComp.TakeOneDamage();
         }
-
+        
         if (hasScore)
         {
             SoundManager.Instance.PlayFX($"hit{Random.Range(1, 4)}");
@@ -60,6 +60,7 @@ public class EnemyBullet : MonoBehaviour
             Bank.AddScore(this, score);
             Damages.Instance.SpawnScore($"+{score}", collision.transform.position);
         }
+        
         _bounces++;
         if (_bounces >= _bouncesBeforeDie) RefreshBullet();
 

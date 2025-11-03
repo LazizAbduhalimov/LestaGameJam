@@ -11290,6 +11290,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52efd0ce8e294a188e976552e8dd996d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Pools::PoolSystem.Alternative.PoolContainer
+--- !u!114 &831470966 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8944415456808002229, guid: d8b7e9b36eb44f64d98a2e0a40d52617, type: 3}
+  m_PrefabInstance: {fileID: 831470964}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52efd0ce8e294a188e976552e8dd996d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Pools::PoolSystem.Alternative.PoolContainer
 --- !u!1 &835485480 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: bbcec6a738349684faa13e6a6a01560f, type: 3}
@@ -11806,7 +11817,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: DamageNumbersPro::DamageNumbersPro.DamageNumberGUI
   permanent: 0
-  lifetime: 0.75
+  lifetime: 0.5
   unscaledTime: 1
   enable3DGame: 0
   faceCameraView: 1
@@ -15237,7 +15248,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30
+  m_fontSize: 26
   m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 0
@@ -19149,6 +19160,11 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -6617631398587751468, guid: 94c361fcf2202884f85353932432298d, type: 3}
+--- !u!4 &1407500121 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2856428693195658495, guid: bbac2099c3c02494fa1bcb6962deabe6, type: 3}
+  m_PrefabInstance: {fileID: 4125668966908085804}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1407623059
 GameObject:
   m_ObjectHideFlags: 0
@@ -19160,6 +19176,7 @@ GameObject:
   - component: {fileID: 1407623060}
   - component: {fileID: 1407623062}
   - component: {fileID: 1407623061}
+  - component: {fileID: 1407623063}
   m_Layer: 0
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -19285,6 +19302,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1407623059}
   m_CullTransparentMesh: 1
+--- !u!114 &1407623063
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1407623059}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49f012b4edc0ab04fba9ad435121adf4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Score
+  Text: {fileID: 1407623061}
 --- !u!4 &1409417438 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3974574588148232603, guid: d8b7e9b36eb44f64d98a2e0a40d52617, type: 3}
@@ -25567,7 +25597,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30
+  m_fontSize: 26
   m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 0
@@ -26356,7 +26386,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30
+  m_fontSize: 26
   m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 0
@@ -27328,7 +27358,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30
+  m_fontSize: 26
   m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 0
@@ -27969,6 +27999,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1994620476}
   m_Mesh: {fileID: 5234789077662077149, guid: d71ce88680845c6468832309ceef0c4b, type: 3}
+--- !u!1 &1997314548 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1314333146917796487, guid: bbac2099c3c02494fa1bcb6962deabe6, type: 3}
+  m_PrefabInstance: {fileID: 4125668966908085804}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2012680222 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 2a201841b7898304eadcff197e5c57cf, type: 3}
@@ -30220,6 +30255,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1766447800}
     - target: {fileID: 4914524097112301927, guid: 5f8b994bd78ee6649a2a707bb9bcfa4f, type: 3}
+      propertyPath: AttackRate
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4914524097112301927, guid: 5f8b994bd78ee6649a2a707bb9bcfa4f, type: 3}
       propertyPath: _bulletsPoolData
       value: 
       objectReference: {fileID: 831470965}
@@ -30370,7 +30409,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2408408881075226810, guid: bbac2099c3c02494fa1bcb6962deabe6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.5
+      value: 1.48
       objectReference: {fileID: 0}
     - target: {fileID: 2408408881075226810, guid: bbac2099c3c02494fa1bcb6962deabe6, type: 3}
       propertyPath: m_LocalPosition.y
@@ -30378,7 +30417,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2408408881075226810, guid: bbac2099c3c02494fa1bcb6962deabe6, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.5
+      value: 2.9
       objectReference: {fileID: 0}
     - target: {fileID: 2408408881075226810, guid: bbac2099c3c02494fa1bcb6962deabe6, type: 3}
       propertyPath: m_LocalRotation.w
@@ -30412,10 +30451,14 @@ PrefabInstance:
       propertyPath: _target
       value: 
       objectReference: {fileID: 1766447800}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1264921068139448512, guid: bbac2099c3c02494fa1bcb6962deabe6, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1314333146917796487, guid: bbac2099c3c02494fa1bcb6962deabe6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5826328528917989936}
   m_SourcePrefab: {fileID: 100100000, guid: bbac2099c3c02494fa1bcb6962deabe6, type: 3}
 --- !u!1001 &4849900163433417300
 PrefabInstance:
@@ -30496,6 +30539,24 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2408408881075226810, guid: bbac2099c3c02494fa1bcb6962deabe6, type: 3}
   m_PrefabInstance: {fileID: 4125668966908085804}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &5826328528917989936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1997314548}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dafb2d3d26d324842b0ebe566c3a9016, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TurretAttack
+  AttackRate: 4
+  _bulletNumber: 3
+  _timeBtwAttack: 0.4
+  _bulletSpeed: 11
+  _bulletCreateTransform: {fileID: 1407500121}
+  _bulletsPoolData: {fileID: 831470966}
 --- !u!4 &6966077028831490162 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 926262005912295144, guid: d615e99527d374e46b3d42cc9934fd9b, type: 3}
